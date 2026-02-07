@@ -11,18 +11,23 @@ A Python script to format text files for small e-reader devices with limited dis
 
 ### Basic Usage
 ```bash
-python ebook_formatter.py input_file.txt
+python ebook_formatter.py input_files
 ```
-This will create a formatted file named `input_file_formatted.txt`
+This will scan the directory (recursively) for files with `txt` in the name.
 
-### Custom Output File
+### Output Directory
 ```bash
-python ebook_formatter.py input_file.txt output_file.txt
+python ebook_formatter.py input_files --output-dir output_files
+```
+
+### Batch with Title-Based Filenames
+```bash
+python ebook_formatter.py input_files --output-dir output_files --search-title
 ```
 
 ### Example
 ```bash
-python ebook_formatter.py sample_ebook.txt
+python ebook_formatter.py input_files --output-dir output_files
 ```
 
 ## Features
